@@ -49,40 +49,54 @@ class Banner extends Component {
                             <img src={lekarz} alt="lekarz"/>
                         </div>
                         <div className="right">
-                            <h2>Kim jesteśmy?</h2>
+                            <h2 className="primary-text">Kim jesteśmy?</h2>
                             <span>Świadczymy szeroką gamę usług medycznych z zakresu Podstawowej Opieki Zdrowotnej. Ambulatoryjnej Opieki Spocjalistycznej, Stomatologii, Diagnostyki laboratoryjnej i obrazowej.</span>
-                            <Link to="/about-us">Dowiedz się więcej</Link>
+                            <Link to="/about-us" className="secondary-color font-heavy" style={{
+                                textTransform: "uppercase",
+                            }}>Dowiedz się więcej</Link>
                         </div>
                     </div>
-                    <hr/>
+                    <div className="midle-hr-container">
+                        <div></div>
+                    </div>
                     <div className="info-right">
                         <table>
                             <tbody>
                             <tr>
-                                <td className="bigText">PN - PT</td>
-                                <td>7:30 - 20:00</td>
+                                <td className="bigText work-hours font-heavy">PN - PT</td>
+                                <td className="font-heavy">7:30 - 20:00</td>
+                            </tr>
+                            <tr style={{
+                                height: "8px"
+                            }}>
+
                             </tr>
                             <tr>
-                                <td>Rejestracja</td>
-                                <td>46 222 44 44</td>
+                                <td className="font-heavy">REJESTRACJA</td>
+                                <td className="secondary-color font-heavy">46 222 44 44</td>
                             </tr>
                             <tr>
                                 <td>Centrala telefoniczna</td>
                             </tr>
                             <tr>
                                 <td>Stomatologia</td>
-                                <td>222-222-222</td>
+                                <td className="secondary-color font-heavy">222-222-222</td>
                             </tr>
                             <tr>
                                 <td>Ginekologia</td>
-                                <td>222-222-222</td>
+                                <td className="secondary-color font-heavy">222-222-222</td>
                             </tr>
                             <tr>
                                 <td>Rehabilitacja</td>
-                                <td>222-222-222</td>
+                                <td className="secondary-color font-heavy">222-222-222</td>
+                            </tr>
+                            <tr style={{
+                                height: "8px"
+                            }}>
+
                             </tr>
                             <tr>
-                                <td>rejestracja@email.com</td>
+                                <td className="secondary-color">rejestracja@email.com</td>
                             </tr>
                             </tbody>
                         </table>

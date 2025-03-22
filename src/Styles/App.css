@@ -1,3 +1,32 @@
-.app{
+.app {
     margin: 0 auto;
+    font-size: 16px;
+}
+
+.primary-color {
+    color: #2F3C7E;
+}
+
+.secondary-color {
+    color: #2D9CDB;
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+.font-heavy {
+    font-weight: 500;
+}
+
+.small-text {
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
 }

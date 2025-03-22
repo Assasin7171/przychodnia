@@ -1,0 +1,39 @@
+.link-categories {
+    height: 500px;
+    background-color: #fafafa;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.link-tile {
+    flex-grow: 1;
+    height: 200px;
+    width: 240px;
+    background-color: #2D9CDB;
+    border-radius: 5px;
+
+}
+
+.tile {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 20px;
+
+}
+
+.tile-header {
+    font-size: 30px;
+}
+
+.tile-body {
+    font-size: 20px;
+}
+
+.tile span{
+    color: #fff;
+}

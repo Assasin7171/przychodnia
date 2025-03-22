@@ -21,10 +21,8 @@
 
 .more-info-about-us{
     background-color: #fff;
-    gap: 10px;
     width: 80%;
     height: 45%;
-    padding: 20px;
     border-top-left-radius:  7px;
     border-top-right-radius:  7px;
     display: flex;
@@ -36,8 +34,8 @@
     flex-direction: row;
     width: 50%;
     gap: 20px;
-    background-color: #eeeeee;
-    border-radius: 5px;
+    background-color: #fff;
+    border-top-left-radius: 5px;
     padding:0 10px;
 }
 
@@ -46,10 +44,11 @@
     width: 50%;
     align-items: center;
     justify-content: center;
-    background-color: #eeeeee;
-    border-radius: 5px;
+    background-color: #F2F2F2;
+    border-top-right-radius: 5px;
     padding: 0 10px;
-    font-size: 20jjjjpx;
+    font-family: "Kanit", sans-serif;
+    font-size: 18px;
 }
 
 .info-left .left img{
@@ -77,5 +76,17 @@
 .bigText{
     text-transform: capitalize;
 }
+.midle-hr-container{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
+.midle-hr-container div{
+    border: 0.5px solid black;
+    height: 100%;
+}
 
+.work-hours{
+    width: 300px;
+}
