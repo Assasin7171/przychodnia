@@ -7,7 +7,7 @@ const data = [
         id: 0,
         dateOfCreate: "2024-03-01",
         title: "Poszukujemy lekarzy",
-        link: "/",
+        link: "/test",
         image: "https://picsum.photos/150/150"
     },
     {
@@ -80,7 +80,7 @@ const News = () => {
     return (
         <section className="section-news-container">
             <div className="section-news">
-                <span className="secondary-color upperCaseText font-heavy">Aktualności</span>
+                <span className="secondary-color upperCaseText font-heavy section-news-title">Aktualności</span>
                 <div className="container">
                     {data.map(item=>(
                         <SingleNews key={item.id} item={item} />
