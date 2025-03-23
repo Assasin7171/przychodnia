@@ -35,9 +35,12 @@ const tiles = [
 ]
 const Categories = () => {
     return (
-        <nav className="link-categories">
-            {tiles.map((tile) => (<Tile key={tile.id} header={tile.header} body={tile.body}/>))}
-        </nav>
+        <section className="links-container">
+            <nav className="link-categories">
+                {tiles.map((tile) => (<Tile key={tile.id} header={tile.header} body={tile.body}/>))}
+            </nav>
+        </section>
+
     )
 }
 

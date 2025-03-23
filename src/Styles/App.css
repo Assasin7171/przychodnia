@@ -23,6 +23,10 @@
     font-size: 14px;
 }
 
+.upperCaseText{
+    text-transform: uppercase;
+}
+
 a {
     text-decoration: none;
 }

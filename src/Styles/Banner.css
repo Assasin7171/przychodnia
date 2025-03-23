@@ -76,13 +76,13 @@
 .bigText{
     text-transform: capitalize;
 }
-.midle-hr-container{
+.middle-hr-container{
     display: flex;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.midle-hr-container div{
+.middle-hr-container div{
     border: 0.5px solid black;
     height: 100%;
 }

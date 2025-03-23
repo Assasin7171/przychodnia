@@ -56,7 +56,7 @@ class Banner extends Component {
                             }}>Dowiedz się więcej</Link>
                         </div>
                     </div>
-                    <div className="midle-hr-container">
+                    <div className="middle-hr-container">
                         <div></div>
                     </div>
                     <div className="info-right">

@@ -1,0 +1,36 @@
+﻿.section-news-container{
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: center;
+
+}
+
+.section-news{
+    width: 80%;
+    margin: 30px;
+    height: 400px;
+}
+
+.section-news .container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+/*pojedyńczy news*/
+
+.news{
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    width: 250px;
+    background-color: green;
+}
+
+.news img{
+    height: 200px;
+}

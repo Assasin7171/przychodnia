@@ -1,21 +1,31 @@
-.link-categories {
-    height: 500px;
+.links-container{
     background-color: #fafafa;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.link-categories {
+    margin: 20px 0;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .link-tile {
     flex-grow: 1;
-    height: 200px;
-    width: 240px;
+    max-height: 200px;
+    max-width: 240px;
     background-color: #2D9CDB;
     border-radius: 5px;
+}
 
+.link-tile:hover {
+    background-color: #777777;
+    transform: scale(1.05);
+    transition: transform .5s;
 }
 
 .tile {
@@ -23,7 +33,6 @@
     flex-direction: column;
     gap: 60px;
     padding: 20px;
-
 }
 
 .tile-header {
