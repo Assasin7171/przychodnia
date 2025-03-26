@@ -86,9 +86,12 @@ const News = () => {
         if (type === "back") {
             newsList = data.slice(visableNews, (visableNews - visableNews)).map(item => (
                 <SingleNews key={item.id} item={item}/>));
+            console.log(newsList);
         } else if (type === "next") {
             newsList = data.slice(visableNews, (visableNews + visableNews)).map(item => (
                 <SingleNews key={item.id} item={item}/>));
+            console.log(newsList);
+
         }
     };
 
