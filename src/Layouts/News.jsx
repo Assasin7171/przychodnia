@@ -1,6 +1,6 @@
 ﻿import "../Styles/News.css";
 import SingleNews from "../Components/SingleNews.jsx";
-import {useState} from "react";
+import {Link} from "react-router-dom";
 
 
 const data = [
@@ -78,25 +78,21 @@ const data = [
 
 
 const News = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [news, setNews] = useState(data.slice(currentIndex, currentIndex + 4).map(item => (
-        <SingleNews key={item.id} item={item}/>)));
+    let newsList = data.slice(0, 4).map(item => (
+        <SingleNews key={item.id} item={item}/>))
 
     const visibleNews = 4;
 
     const changeNews = (type) => {
-        let newIndex = currentIndex;
-
-        if (type === "back") {
-            newIndex = Math.max(0, currentIndex - visibleNews);
-        } else if (type === "next") {
-            newIndex = Math.min(data.length - visibleNews, currentIndex + visibleNews);
-        }
-
-        setCurrentIndex(newIndex);
-        setNews(data.slice(newIndex, newIndex + visibleNews).map(item => (
-            <SingleNews key={item.id} item={item} />
-        )));
+        // if (type === "back") {
+        //     newsList = data.slice(visibleNews, (visibleNews - visibleNews)).map(item => (
+        //         <SingleNews key={item.id} item={item}/>));
+        //     console.log(newsList);
+        // } else if (type === "next") {
+        //     newsList = data.slice(visibleNews, (visibleNews + visibleNews)).map(item => (
+        //         <SingleNews key={item.id} item={item}/>));
+        //     console.log(newsList);
+        // }
     };
 
     return (
@@ -105,10 +101,11 @@ const News = () => {
                 <span className="secondary-color upperCaseText font-heavy section-news-title">Aktualności</span>
                 <div className="container">
                     <button onClick={() => changeNews("back")} className="btn-slider-news">{"<"}</button>
-                    {news}
+                    {newsList}
                     <button onClick={() => changeNews("next")} className="btn-slider-news">{">"}</button>
                 </div>
             </div>
+            <Link className="upperCaseText btn" to={"/"}>wszystkie aktualnosci</Link>
         </section>
     )
 }

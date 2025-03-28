@@ -2,6 +2,8 @@
     background-color: #F2F2F2;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .section-news{
@@ -38,4 +40,33 @@
     background-color: #777777;
     cursor: pointer;
     border: 1px solid #000;
+}
+
+button{
+    font-size: 18px;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    background-color: #ffffff;
+    color: #000;
+    transition: .5s;
+}
+
+button:hover{
+    background-color: #777777;
+    cursor: pointer;
+}
+
+.btn{
+    color: #2D9CDB;
+    border: 1px solid #2F3C7E;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    transition: .5s;
+}
+.btn:hover{
+    background-color: #333333;
+    color: #ffffff;
+    transition: .5s;
+    transform: scale(1.05);
+    cursor: pointer;
 }
