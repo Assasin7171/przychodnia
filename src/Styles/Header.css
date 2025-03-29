@@ -1,4 +1,4 @@
-﻿.header{
+﻿.header {
     width: 100%;
     position: sticky;
     top: 0;
@@ -7,32 +7,33 @@
     -moz-box-shadow: 0px 0px 20px 0px rgb(114, 114, 114);
     box-shadow: 0px 0px 20px 0px rgb(114, 114, 114);
     z-index: 999;
+    display: flex;
+    justify-content: center;
 }
 
-.header-details{
+.header-details {
     height: 100px;
-    margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
     width: 80%;
 }
 
-.logo{
+.logo {
     width: 100px;
 }
 
-.nav-links{
+.nav-links {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 20px;
+    position: relative;
 }
 
-.nav-links a{
+.nav-links a, .nav-links button {
     font-size: 20px;
     text-decoration: none;
     color: #333;
@@ -40,13 +41,17 @@
     margin: 5px;
     padding: 5px;
     transition: 0.5s;
+    background-color: #fff;
+    border: none;
 }
-.nav-links a:hover{
+
+
+.nav-links a:hover, .nav-links button:hover {
     border-bottom: 1px solid #2F3C7E;
     color: #2F3C7E;
 }
 
-.right-menu{
+.right-menu {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -54,7 +59,7 @@
     gap: 1rem;
 }
 
-.right-menu div{
+.right-menu div {
     border: 1px solid #1a1c2d;
     border-radius: 2.5rem;
     width: 2.5rem;
@@ -64,6 +69,34 @@
     align-items: center;
 }
 
-.right-menu div:hover{
+.right-menu div:hover {
     cursor: pointer;
+}
+
+.nav-links-dropdown-menu {
+    -webkit-box-shadow: 0px 0px 20px 0px rgb(114, 114, 114);
+    -moz-box-shadow: 0px 0px 20px 0px rgb(114, 114, 114);
+    box-shadow: 0px 10px 20px 0px rgb(114, 114, 114);
+    z-index: 999;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    position: absolute;
+    gap: 10px;
+    top: 100px;
+    background-color: #2D9CDB;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.nav-links-dropdown-menu a {
+    padding: 5px 10px;
+    margin: 10px 0;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.nav-links-dropdown-menu a:hover {
+    background-color: #2F3C7E;
 }

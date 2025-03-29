@@ -1,22 +1,54 @@
 ﻿import {Link} from "react-router-dom";
 import "../Styles/Header.css";
+import {useState} from "react";
 
 const Header = () => {
+    const [showDropdownMenu, setShowDropdownMenu] = useState({
+        "display": "none",
+    });
+    const handleShowDropdownMenu = () => {
+        setShowDropdownMenu({"display": "flex"});
+    };
+
+
+    const handleHideDropdownMenu = () => {
+        setShowDropdownMenu({"display": "none",})
+    };
     return (
-        <header className="header">
+        <header className="header"
+                onMouseLeave={handleHideDropdownMenu}>
             <div className="header-details">
                 <div className="logo">
-                    <img src="https://centrumogrodowa.pl/wp-content/uploads/2023/05/logo.png" alt=""/>
+                    tu będzie logo
                 </div>
                 <div className="nav-links">
-                    <Link to={"/services"}>usługi</Link>
-                    <Link to={"/news"}>aktualności</Link>
-                    <Link to={"/about-us"}>o nas</Link>
-                    <Link to={"/contact"}>kontakt</Link>
+                    <div className="links">
+                        <button onMouseOver={handleShowDropdownMenu}>
+                            usługi
+                        </button>
+                        <Link onMouseOver={handleHideDropdownMenu} to={"/news"}>aktualności</Link>
+                        <Link onMouseOver={handleHideDropdownMenu} to={"/about-us"}>o nas</Link>
+                        <Link onMouseOver={handleHideDropdownMenu} to={"/contact"}>kontakt</Link>
+                    </div>
                 </div>
+
+                <div className="nav-links-dropdown-menu"
+                     onMouseOver={handleShowDropdownMenu}
+                     onMouseLeave={handleHideDropdownMenu}
+                     style={showDropdownMenu}>
+                    <Link to={"/"}>e - rejestracja</Link>
+                    <Link to={"/"}>poradnie specjalistyczne</Link>
+                    <Link to={"/"}>nasze oddziały</Link>
+                    <Link to={"/"}>rehabilitacja</Link>
+                    <Link to={"/"}>badania diagnostyczne</Link>
+                    <Link to={"/"}>badania klicznie</Link>
+                    <Link to={"/"}>e-wyniki</Link>
+                </div>
+
                 <div className="right-menu">
                     <div>
-                        <svg focusable="false" aria-label="Search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        <svg focusable="false" aria-label="Search" xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 24 24"
                              width="24px">
                             <path
                                 d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>

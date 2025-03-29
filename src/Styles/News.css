@@ -43,7 +43,7 @@
     border: 1px solid #000;
 }
 
-button{
+.btn-slider-news{
     font-size: 18px;
     padding: 10px 20px;
     border: 1px solid #000;
@@ -52,7 +52,7 @@ button{
     transition: .5s;
 }
 
-button:hover{
+.btn-slider-news:hover{
     background-color: #777777;
     cursor: pointer;
 }
