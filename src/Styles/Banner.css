@@ -21,15 +21,12 @@
 
 .more-info-about-us{
     background-color: #fff;
-    max-width: 1300px;
-    width: 100%;
+    width: 80%;
     height: 45%;
     border-top-left-radius:  7px;
     border-top-right-radius:  7px;
     display: flex;
     flex-direction: row;
-    
-    
 }
 
 .more-info-about-us .info-left{
