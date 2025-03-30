@@ -8,7 +8,7 @@ import News from "./News.jsx";
 function App() {
     return (
         <div className="app">
-            <Header />
+            <Header/>
             <Banner/>
             <Categories/>
             <News/>

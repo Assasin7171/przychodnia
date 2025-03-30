@@ -85,16 +85,18 @@
     position: absolute;
     gap: 10px;
     top: 100px;
+    padding: 0 15px;
     background-color: #2D9CDB;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 
 .nav-links-dropdown-menu a {
-    padding: 5px 10px;
+    padding: 5px 5px;
     margin: 10px 0;
     text-transform: uppercase;
     color: #fff;
+    font-size: 14px;
 }
 
 .nav-links-dropdown-menu a:hover {
