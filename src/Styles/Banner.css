@@ -1,12 +1,13 @@
-﻿@media (min-width: 0px) and (max-width: 768px) {
+﻿@media (min-width: 0px) and (max-width: 1069px) {
     .slider {
-        background-image: none !important;
         display: flex;
         justify-content: center;
         align-items: end;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         width: 100%;
-        padding: 10px;
-        background-color: #F2F2F2;
+        height: 600px;
         transition: opacity 0.5s ease-in-out;
     }
 
@@ -20,7 +21,7 @@
     }
 
     .more-info-about-us {
-        width: 90%;
+        background-color: #fff;
         height: 60%;
         border-top-left-radius: 7px;
         border-top-right-radius: 7px;
@@ -40,6 +41,7 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+        background-color: #fff;
         padding: 0 10px;
     }
 
@@ -51,7 +53,7 @@
         background-color: #F2F2F2;
         font-family: "Kanit", sans-serif;
         font-size: 16px;
-        padding: 20px 0;
+        padding: 20px;
         box-sizing: border-box;
     }
 
@@ -108,122 +110,7 @@
     }
 }
 
-@media (min-width: 769px) and (max-width: 1089px) {
-    .slider {
-        display: flex;
-        justify-content: center;
-        align-items: end;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 600px;
-        transition: opacity 0.5s ease-in-out;
-    }
-
-    .btn-slider-nav {
-        border: 1px solid green;
-        width: 50px;
-        height: 50px;
-        margin: 10px;
-        border-radius: 50%;
-        font-size: 18px;
-    }
-
-    .more-info-about-us {
-        background-color: #fff;
-        width: 80%;
-        border-top-left-radius: 7px;
-        border-top-right-radius: 7px;
-        display: flex;
-        flex-direction: row;
-    }
-
-    .more-info-about-us .info-left {
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-        gap: 20px;
-        background-color: #fff;
-        border-top-left-radius: 5px;
-        padding: 10px;
-        font-size: 16px;
-    }
-
-    .more-info-about-us .info-right {
-        display: flex;
-        width: 50%;
-        align-items: center;
-        justify-content: center;
-        background-color: #F2F2F2;
-        border-top-right-radius: 5px;
-        padding: 0 10px;
-        font-family: "Kanit", sans-serif;
-        font-size: 16px;
-        transition: font-size 0.5s;
-    }
-
-    .info-left .left img {
-        width: 100px;
-        height: 100px;
-        border-radius: 100%;
-        object-fit: cover;
-        object-position: center;
-        border: 1px solid black;
-    }
-
-    .info-left .left {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .info-left .right {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        justify-content: center;
-    }
-
-    .more-info-about-us .info-right td {
-        padding: 4px;
-        word-break: normal;
-        white-space: nowrap;
-        font-size: 14px;
-    }
-
-    .more-info-about-us .info-right td:nth-child(2) {
-        min-width: 120px;
-        text-align: right;
-    }
-
-    .more-info-about-us .info-right table {
-        width: 100%;
-        max-width: 400px;
-        border-collapse: collapse;
-    }
-
-    .bigText {
-        text-transform: capitalize;
-    }
-
-    .middle-hr-container {
-        display: flex;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .middle-hr-container div {
-        border: 0.5px solid black;
-        height: 100%;
-    }
-
-    .work-hours {
-        width: 300px;
-    }
-}
-
-@media (min-width: 1090px) and (max-width: 1297px) {
+@media (min-width: 1070px) and (max-width: 1297px) {
     .slider {
         display: flex;
         justify-content: center;
@@ -260,10 +147,10 @@
         flex-direction: row;
         width: 50%;
         gap: 20px;
+        font-size: 14px;
         background-color: #fff;
         border-top-left-radius: 5px;
         padding: 0 10px;
-        font-size: 16px;
     }
 
     .more-info-about-us .info-right {
