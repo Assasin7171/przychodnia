@@ -63,7 +63,10 @@ class Banner extends Component {
                         <table>
                             <tbody>
                             <tr>
-                                <td className="bigText work-hours font-heavy">PN - PT</td>
+                                <td className="bigText work-hours font-heavy">
+                                    <i className="fa fa-calendar"></i>
+                                    PN - PT
+                                </td>
                                 <td className="font-heavy">7:30 - 20:00</td>
                             </tr>
                             <tr style={{
@@ -72,7 +75,10 @@ class Banner extends Component {
 
                             </tr>
                             <tr>
-                                <td className="font-heavy">REJESTRACJA</td>
+                                <td className="font-heavy">
+                                    <i className="fa fa-phone"></i>
+                                    REJESTRACJA
+                                </td>
                                 <td className="secondary-color font-heavy">46 222 44 44</td>
                             </tr>
                             <tr>
@@ -96,7 +102,11 @@ class Banner extends Component {
 
                             </tr>
                             <tr>
-                                <td className="secondary-color">rejestracja@email.com</td>
+                                <td className="secondary-color">
+                                    <i className="fa fa-mailchimp"
+                                    style={{width: "20px", fontSize: "20px"}}></i>
+                                    rejestracja@email.com
+                                </td>
                             </tr>
                             </tbody>
                         </table>
