@@ -37,6 +37,11 @@
 .icon-col, .info-col, .phone-numbers-col{
     display: flex;
     flex-direction: column;
+    
+}
+
+.more-info-about-us .phone-numbers-col{
+    align-items: flex-end;
 }
 
 .icon-col{
@@ -148,6 +153,7 @@
         background-color: #fff;
         padding: 0 10px;
     }
+    
 
     .more-info-about-us .info-right{
         font-size: 14px;
@@ -220,6 +226,7 @@
     .more-info-about-us .info-right{
         width: 100%;
     }
+
 
 
 }

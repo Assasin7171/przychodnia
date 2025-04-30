@@ -1,111 +1,51 @@
 ﻿import {Link} from "react-router-dom";
-// import "../Styles/Header.css";
-import {useState} from "react";
+import 'bootstrap/js/dist/dropdown.js'
 
 const Header = () => {
-    const [showDropdownMenu, setShowDropdownMenu] = useState({
-        "display": "none",
-    });
-
-    const [showDropdownMenuMobile, setShowDropdownMenuMobile] = useState({
-        "display": "none",
-    });
-
-    const [showBackMenuButton, setShowBackMenuButton] = useState(false);
-    const handleShowDropdownMenu = (type) => {
-        if (type === "desktop") {
-            setShowDropdownMenu({"display": "flex"});
-        }
-    };
-
-
-    const handleHideDropdownMenu = (type) => {
-        if (type === "desktop") {
-            setShowDropdownMenu({"display": "none"});
-        }
-    };
-
-
-    const handleShowDropdownMenuMobile = () => {
-        if(!showBackMenuButton){
-            setShowDropdownMenuMobile({"display": "flex"});
-            setShowBackMenuButton(true);
-        } else {
-            setShowBackMenuButton(false);
-            setShowDropdownMenuMobile({"display": "none"});
-        }
-
-    };
-
-
     return (
-        <header className="header"
-                onMouseLeave={handleHideDropdownMenu}>
-            <div className="header-details">
-                <div className="header-mobile-menu"
-                     onClick={() => handleShowDropdownMenuMobile()}>
-                    {showBackMenuButton ?
-                        <i className="fa fa-arrow-alt-circle-left"></i> :
-                        <i className="fa fa-bars"></i>}
-                </div>
-                <div className="logo">
-                    tu będzie logo
-                </div>
-                <div className="nav-links">
-                    <div className="links">
-                        <button onMouseOver={() => handleShowDropdownMenu("desktop")}>
-                            usługi
-                        </button>
-                        <Link onMouseOver={handleHideDropdownMenu} to={"/news"}>aktualności</Link>
-                        <Link onMouseOver={handleHideDropdownMenu} to={"/about-us"}>o nas</Link>
-                        <Link onMouseOver={handleHideDropdownMenu} to={"/contact"}>kontakt</Link>
-                    </div>
-                </div>
-
-                <div className="nav-links-dropdown-menu"
-                     onMouseOver={() => handleShowDropdownMenu("desktop")}
-                     onMouseLeave={() => handleHideDropdownMenu("desktop")}
-                     style={showDropdownMenu}>
-                    <Link to={"/"}>e - rejestracja</Link>
-                    <Link to={"/"}>poradnie specjalistyczne</Link>
-                    <Link to={"/"}>nasze oddziały</Link>
-                    <Link to={"/"}>rehabilitacja</Link>
-                    <Link to={"/"}>badania diagnostyczne</Link>
-                    <Link to={"/"}>badania klicznie</Link>
-                    <Link to={"/"}>e-wyniki</Link>
-                </div>
-
-                <div className="right-menu">
-                    <div>
-                        <i className="fa fa-search"/>
-                    </div>
-                    <div>
-                        <i className="fa fa-users"/>
-                    </div>
+        <nav className="navbar navbar-expand-lg bg-body-tertiary lead text-uppercase">
+            <div className="container-fluid">
+                <img src="https://placehold.co/80x80" className="img-fluid" alt="logo"/>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul className="navbar-nav mx-auto mb-2 mb-lg-0 gap-4">
+                        <li className="nav-item dropdown">
+                            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Usługi
+                            </a>
+                            <ul className="dropdown-menu">
+                                <li><a className="dropdown-item" href="#">E-Rejestracja</a></li>
+                                <li><a className="dropdown-item" href="#">Poradnie specjalistyczne</a></li>
+                                <li><a className="dropdown-item" href="#">Nasze oddziały</a></li>
+                                <li><a className="dropdown-item" href="#">Stomatologia</a></li>
+                                <li><a className="dropdown-item" href="#">Rehabilitacja</a></li>
+                                <li><a className="dropdown-item" href="#">Badania diagnostyczne</a></li>
+                                <li><a className="dropdown-item" href="#">Badania kliniczne</a></li>
+                                <li><a className="dropdown-item" href="#">E-Wyniki</a></li>
+                            </ul>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" aria-current="page" to="/aktualnosci">Aktualności</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" aria-current="page" to="/o_nas">O nas</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" aria-current="page" to="/kontakt">Kontakt</Link>
+                        </li>
+                    </ul>
+                    <form className="d-flex" role="search">
+                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                        <button className="btn btn-outline-success" type="submit">Search</button>
+                    </form>
                 </div>
             </div>
-
-            <div className="nav-links-dropdown-menu-mobile"
-                 onMouseOver={() => handleShowDropdownMenu("mobile")}
-                 onMouseLeave={() => handleHideDropdownMenu("mobile")}
-                 style={showDropdownMenuMobile}>
-                <p>Usługi</p>
-                <div className="dropdown-menu-mobile-container">
-                    <Link to={"/"}>e - rejestracja</Link>
-                    <Link to={"/"}>poradnie specjalistyczne</Link>
-                    <Link to={"/"}>nasze oddziały</Link>
-                    <Link to={"/"}>rehabilitacja</Link>
-                    <Link to={"/"}>badania diagnostyczne</Link>
-                    <Link to={"/"}>badania klicznie</Link>
-                    <Link to={"/"}>e-wyniki</Link>
-                </div>
-                <div className="main-links">
-                    <Link className="border-bottom-links" to={"/"}>aktualności</Link>
-                    <Link className="border-bottom-links" to={"/"}>o nas</Link>
-                    <Link to={"/"}>kontakt</Link>
-                </div>
-            </div>
-        </header>
+        </nav>
 
     )
 }

@@ -8,8 +8,7 @@ import News from "./News.jsx";
 function App() {
     return (
         <div className="container-md">
-            <button className="btn btn-primary">OK</button>
-            {/*<Header/>*/}
+            <Header/>
             {/*<Banner/>*/}
             {/*<Categories/>*/}
             {/*<News/>*/}

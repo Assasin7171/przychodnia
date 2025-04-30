@@ -5,6 +5,10 @@ import App from './Layouts/App.jsx'
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import ErrorPage from "./Pages/ErrorPage.jsx";
 
+// Import Bootstrap styles
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.min.css'
+
 createRoot(document.getElementById('root')).render(
     <StrictMode>
         <BrowserRouter>
