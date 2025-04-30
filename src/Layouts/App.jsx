@@ -7,11 +7,12 @@ import News from "./News.jsx";
 
 function App() {
     return (
-        <div className="app">
-            <Header/>
-            <Banner/>
-            <Categories/>
-            <News/>
+        <div className="container-md">
+            <button className="btn btn-primary">OK</button>
+            {/*<Header/>*/}
+            {/*<Banner/>*/}
+            {/*<Categories/>*/}
+            {/*<News/>*/}
             {/*<Footer/>*/}
         </div>
     )
