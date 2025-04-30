@@ -27,10 +27,6 @@ const tiles = [
         id: 6,
         header: "E - Rejestracja",
         body: "Umów się na wizyte"
-    }, {
-        id: 7,
-        header: "E - Rejestracja",
-        body: "Umów się na wizyte"
     }
 ]
 const Categories = () => {
