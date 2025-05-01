@@ -7,9 +7,9 @@ import News from "./News.jsx";
 
 function App() {
     return (
-        <div className="container-md">
+        <div className="container-fluid">
             <Header/>
-            {/*<Banner/>*/}
+            <Banner/>
             {/*<Categories/>*/}
             {/*<News/>*/}
             {/*<Footer/>*/}

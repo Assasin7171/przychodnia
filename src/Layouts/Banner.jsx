@@ -7,79 +7,78 @@ import lekarz2 from "../Assets/lekarz2.jpg"
 
 import "../Styles/Banner.css"
 import {Component} from "react";
+import "bootstrap/js/dist/carousel.js"
 import Slider from "../Components/Slider.jsx";
 import AboutUs from "../Components/AboutUs.jsx";
 import AboutUsTile from "../Components/AboutUsTile.jsx";
 import OpeningTimes from "../Components/OpeningTimes.jsx";
+import {Link} from "react-router-dom";
 
 class Banner extends Component {
-    state = {
-        image: img1,
-    }
-
-    images = [img1, img2, img3, img4];
-    index = 0;
-    intervalIndex;
-
-    componentDidMount() {
-        this.intervalIndex = setInterval(() => {
-            this.index = this.getImageIndex();
-            let image = this.images[this.index];
-
-            this.setState({image});
-
-        }, 10000)
-    }
-
-    componentWillUnmount() {
-        clearInterval(this.intervalIndex);
-    }
-
-    aboutUsComponentDesktop = window.innerWidth > 1023 ?
-        <AboutUs>
-            <AboutUsTile images={[lekarz, lekarz2]}/>
-
-            <div className="middle-hr-container">
-                <div></div>
-            </div>
-
-            <OpeningTimes/>
-        </AboutUs> : null;
-
-    aboutUsComponentMobile = window.innerWidth < 1023 ?
-        <AboutUs>
-            <AboutUsTile images={[lekarz, lekarz2]}/>
-
-            <div className="middle-hr-container">
-                <div></div>
-            </div>
-
-            <OpeningTimes/>
-        </AboutUs> : null;
 
     render() {
         return (
-            <>
-                <Slider bgImage={this.state.image}>
-                    {/*<button onClick={this.handleGoBack} className={"btn-slider-nav"}>{"<"}</button>*/}
-                    {/*<button onClick={this.handleGoUp} className={"btn-slider-nav"}>{">"}</button>*/}
-                    {this.aboutUsComponentDesktop}
-                </Slider>
-                {this.aboutUsComponentMobile}
-            </>
+            <div className="container-fluid mx-0 px-0">
+                <div id="carouselExampleIndicators" className="carousel slide">
+                    <div className="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                className="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                    </div>
+                    <div className="carousel-inner">
+                        <div className="carousel-item active c-item">
+                            <img src={img1} className="d-block c-img w-100" alt="..."/>
+                            <div className="carousel-indicators mb-0">
+                                <div className="row bg-white rounded-top p-5">
+                                    <div className="col-md-6">
+                                        <div className="row">
+                                            <div className="col-sm-4">
+                                                <div className="row">
+                                                    <div className="col-sm-6">
+                                                        <img src={lekarz2} className="img-fluid rounded-circle" alt=""/>
+                                                    </div>
+                                                    <div className="col-sm-6">
+                                                        <img src={lekarz} className="img-fluid rounded-circle" alt=""/>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div className="col-sm-8">
+                                                <h2>Kim jesteśmy?</h2>
+                                                <p>Świadczymy szeroką gamę usług medycznych z zakresu Podstawowej Opieki Zdrowotnej. Ambulatoryjnej Opieki Specjalistycznej, Stomatologii, Diagnostyki laboratoryjnej i obrazowej.</p>
+                                                <Link className="link-success text-decoration-none " to="/o-nas">Dowiedz się więcej</Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="carousel-item c-item">
+                            <img src={img2} className="d-block c-img w-100" alt="..."/>
+                        </div>
+                        <div className="carousel-item c-item">
+                            <img src={img3} className="d-block c-img w-100" alt="..."/>
+                        </div>
+                    </div>
+                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Previous</span>
+                    </button>
+                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
         )
     }
 
-    getImageIndex = () => {
-        return Math.floor(Math.random() * this.images.length);
-    }
-
-    handleGoBack = () => {
-        this.setState({image: img1});
-    }
-    handleGoUp = () => {
-
-    }
 }
 
 export default Banner
