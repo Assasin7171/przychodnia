@@ -1,15 +1,36 @@
-﻿const Slider = (props) => {
-    const sliderStyles = {
-        backgroundImage: `url(${props.bgImage})`,
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-    }
+﻿import "bootstrap/js/src/carousel.js";
+
+const Slider = ({bgImages}) => {
+    // const sliderStyles = {
+    //     backgroundImage: `url(${props.bgImage})`,
+    //     backgroundPosition: 'center',
+    //     backgroundRepeat: 'no-repeat',
+    //     backgroundSize: 'cover',
+    // }
 
     return (
-        <div className="c-item container-fluid mx-0 my-0 px-0 py-0"
-             style={sliderStyles}>
-            {props.children}
+        <div id="carouselExample" className="carousel slide">
+            <div className="carousel-inner">
+                <div className="carousel-item c-item active">
+                    <img src={bgImages[0]} className="d-block c-img w-100" alt="..."/>
+                </div>
+                <div className="carousel-item c-item">
+                    <img src={bgImages[1]} className="d-block c-img w-100" alt="..."/>
+                </div>
+                <div className="carousel-item c-item">
+                    <img src={bgImages[2]} className="d-block c-img w-100" alt="..."/>
+                </div>
+            </div>
+            <button className="carousel-control-prev w-auto h-auto" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span className="visually-hidden">{"<"}</span>
+            </button>
+            <button className="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                <span className="carousel-control-next-icon btn btn-success rounded-circle p-4" aria-hidden="true"></span>
+                <span className="visually-hidden">{">"}</span>
+            </button>
         </div>
     )
 }
