@@ -2,25 +2,24 @@
 import img2 from "../Assets/2.jpg"
 import img3 from "../Assets/3.jpg"
 import img4 from "../Assets/4.jpg"
-import lekarz from "../Assets/lekarz.jpg"
-import lekarz2 from "../Assets/lekarz2.jpg"
+// import lekarz from "../Assets/lekarz.jpg"
+// import lekarz2 from "../Assets/lekarz2.jpg"
 
 import "../Styles/Banner.css"
 import {Component} from "react";
 import Slider from "../Components/Slider.jsx";
 import AboutUs from "../Components/AboutUs.jsx";
-import AboutUsTile from "../Components/AboutUsTile.jsx";
-import OpeningTimes from "../Components/OpeningTimes.jsx";
-import {Link} from "react-router-dom";
 
 class Banner extends Component {
-    images = [img1,img2,img3,img4]
+    images = [img1, img2, img3, img4]
 
     render() {
         return (
-            <Slider bgImages={this.images}>
+            <>
+                <Slider bgImages={this.images}/>
+                <AboutUs/>
+            </>
 
-            </Slider>
         )
     }
 

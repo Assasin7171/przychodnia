@@ -3,8 +3,8 @@ import 'bootstrap/js/dist/dropdown.js'
 
 const Header = () => {
     return (
-        <div className="container-md">
-            <nav className="navbar navbar-expand-lg bg-white lead text-uppercase">
+        <div className="container">
+            <nav className="navbar navbar-expand-lg bg-white sticky-top lead text-uppercase">
                 <div className="container-fluid">
                     <img src="https://placehold.co/80x80" className="img-fluid" alt="logo"/>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
