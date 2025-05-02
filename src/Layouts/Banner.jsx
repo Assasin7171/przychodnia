@@ -7,7 +7,6 @@ import lekarz2 from "../Assets/lekarz2.jpg"
 
 import "../Styles/Banner.css"
 import {Component} from "react";
-import "bootstrap/js/dist/carousel.js"
 import Slider from "../Components/Slider.jsx";
 import AboutUs from "../Components/AboutUs.jsx";
 import AboutUsTile from "../Components/AboutUsTile.jsx";
@@ -18,64 +17,30 @@ class Banner extends Component {
 
     render() {
         return (
-            <div className="container-fluid mx-0 px-0">
-                <div id="carouselExampleIndicators" className="carousel slide">
-                    <div className="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                                className="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
+            <Slider bgImage={img1}>
+                <div className="row h-100">
+                    <div className="col-md-2 d-flex justify-content-start align-items-center">
+                        <button className="mx-3">Previous</button>
                     </div>
-                    <div className="carousel-inner">
-                        <div className="carousel-item active c-item">
-                            <img src={img1} className="d-block c-img w-100" alt="..."/>
-                            <div className="carousel-indicators mb-0">
-                                <div className="row bg-white rounded-top p-5">
-                                    <div className="col-md-6">
-                                        <div className="row">
-                                            <div className="col-sm-4">
-                                                <div className="row">
-                                                    <div className="col-sm-6">
-                                                        <img src={lekarz2} className="img-fluid rounded-circle" alt=""/>
-                                                    </div>
-                                                    <div className="col-sm-6">
-                                                        <img src={lekarz} className="img-fluid rounded-circle" alt=""/>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
-                                            <div className="col-sm-8">
-                                                <h2>Kim jesteśmy?</h2>
-                                                <p>Świadczymy szeroką gamę usług medycznych z zakresu Podstawowej Opieki Zdrowotnej. Ambulatoryjnej Opieki Specjalistycznej, Stomatologii, Diagnostyki laboratoryjnej i obrazowej.</p>
-                                                <Link className="link-success text-decoration-none " to="/o-nas">Dowiedz się więcej</Link>
-                                            </div>
-                                        </div>
+                    <div className="col-md-8 d-flex justify-content-start align-items-end">
+                        <div className="row">
+                            <div className="col-md-6">
+                                <div className="row">
+                                    <div className="col-sm-4">
+                                        <img src="https://placehold.co/80x80" className="img-fluid rounded-circle" alt=""/>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="carousel-item c-item">
-                            <img src={img2} className="d-block c-img w-100" alt="..."/>
-                        </div>
-                        <div className="carousel-item c-item">
-                            <img src={img3} className="d-block c-img w-100" alt="..."/>
+                            <div className="col-md-6">
+                                
+                            </div>
                         </div>
                     </div>
-                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide="prev">
-                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Previous</span>
-                    </button>
-                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide="next">
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Next</span>
-                    </button>
+                    <div className="col-md-2 d-flex justify-content-end align-items-center">
+                        <button className="mx-3">Next</button>
+                    </div>
                 </div>
-            </div>
+            </Slider>
         )
     }
 
