@@ -15,10 +15,10 @@ class Banner extends Component {
 
     render() {
         return (
-            <>
+            <div className="container-fluid px-0 slider-container">
                 <Slider bgImages={this.images}/>
                 <AboutUs/>
-            </>
+            </div>
 
         )
     }

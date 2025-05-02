@@ -15,3 +15,18 @@
     left: 50%;
     transform: translate(-50%,-100%);
 }
+
+.slider-container{
+    max-width: 2000px;
+}
+
+@media (max-width: 768px){
+    .on-slider{
+        position: relative;
+        left: 0;
+        transform: translate(0,0);
+    }
+    #kim-jestesmy{
+        border: none !important;
+    }
+}

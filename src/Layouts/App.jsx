@@ -7,10 +7,10 @@ import News from "./News.jsx";
 
 function App() {
     return (
-        <div className="container-fluid px-0 py-0">
+        <div className="container-fluid px-0">
             <Header/>
             <Banner/>
-            {/*<Categories/>*/}
+            <Categories/>
             {/*<News/>*/}
             {/*<Footer/>*/}
         </div>

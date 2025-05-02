@@ -1,5 +1,4 @@
-﻿import {Link} from "react-router-dom";
-import "../Styles/Categories.css";
+﻿import "../Styles/Categories.css";
 import Tile from "../Components/Tile.jsx";
 
 const tiles = [
@@ -31,11 +30,19 @@ const tiles = [
 ]
 const Categories = () => {
     return (
-        <section className="links-container">
-            <nav className="link-categories">
-                {tiles.map((tile) => (<Tile key={tile.id} header={tile.header} body={tile.body}/>))}
-            </nav>
+        <section>
+            <div className="container-md px-3">
+                <div className="row gap-1">
+                    {tiles.map((tile) => (<Tile key={tile.id} header={tile.header} body={tile.body}/>))}
+                </div>
+            </div>
         </section>
+
+
+        // <nav className="link-categories">
+        //     {tiles.map((tile) => (<Tile key={tile.id} header={tile.header} body={tile.body}/>))}
+        // </nav>
+
 
     )
 }
