@@ -1,13 +1,6 @@
 ﻿import "bootstrap/js/src/carousel.js";
 
 const Slider = ({bgImages}) => {
-    // const sliderStyles = {
-    //     backgroundImage: `url(${props.bgImage})`,
-    //     backgroundPosition: 'center',
-    //     backgroundRepeat: 'no-repeat',
-    //     backgroundSize: 'cover',
-    // }
-
     return (<div id="carouselExample" className="carousel slide">
         <div className="carousel-inner">
             <div className="carousel-item c-item active">
