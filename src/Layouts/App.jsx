@@ -7,12 +7,12 @@ import News from "./News.jsx";
 
 function App() {
     return (
-        <div className="container-fluid px-0">
+        <div className="container-fluid px-0 bg-body-tertiary">
             <Header/>
             <Banner/>
             <Categories/>
-            {/*<News/>*/}
-            {/*<Footer/>*/}
+            <News/>
+            <Footer/>
         </div>
     )
 }

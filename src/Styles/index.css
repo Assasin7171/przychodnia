@@ -1,3 +1,16 @@
 *{
     font-family: "Roboto", sans-serif;
 }
+
+/* domyślnie (mobile‑first): górne obramowanie */
+.custom-border {
+    border-top: 2px solid #dee2e6;
+}
+
+/* od tabletów (>=768px): zamiast top – prawy */
+@media (min-width: 768px) {
+    .custom-border {
+        border-top: none !important;
+        border-inline-end: 2px solid #dee2e6 !important;
+    }
+}

@@ -33,3 +33,25 @@
 /*a:hover {*/
 /*    cursor: pointer;*/
 /*}*/
+
+.text-res {
+    font-size: 0.9rem;
+}
+
+@media (min-width: 576px) {
+    .text-res {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .text-res {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .text-res {
+        font-size: 1.2rem;
+    }
+}
