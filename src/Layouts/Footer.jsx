@@ -80,10 +80,11 @@ const Footer = () => {
                         <span className="text-white">Copyright © 2025</span>
                     </div>
 
-                    <div className="media d-flex gap-2 align-items-center">
-                        <i className="bi bi-facebook"></i>
-                        <i className="bi bi-google"></i>
-                        <i className="bi bi-youtube"></i>
+                    <div className="media  d-flex gap-2 align-items-center">
+                        <Link className="link-info text-white" to="/facebook"><i className="bi bi-facebook"></i></Link>
+                        <Link className="link-info text-white" to="/google"><i className="bi bi-google"></i></Link>
+                        <Link className="link-info text-white" to="/google"><i className="bi bi-youtube"></i></Link>
+
                     </div>
                 </div>
             </div>
