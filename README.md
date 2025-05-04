@@ -2,8 +2,8 @@
 
 Aplikacja webowa dla przychodni medycznej, stworzona z użyciem Reacta i Bootstrapa. Umożliwia pacjentom szybki dostęp do podstawowych usług oraz informacji.
 
-## 🖥️ Pogląd
-
+## 🖥️ Demo
+https://assasin7171.github.io/przychodnia/
 
 ## 🔧 Technologie
 
