@@ -1,12 +1,52 @@
-# React + Vite
+# Strona dla przychodni
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplikacja webowa dla przychodni medycznej, stworzona z użyciem Reacta i Bootstrapa. Umożliwia pacjentom szybki dostęp do podstawowych usług oraz informacji.
 
-Currently, two official plugins are available:
+## 🖥️ Pogląd
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## 🔧 Technologie
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- React Router DOM
+- Bootstrap 5
+
+## ✨ Funkcje
+
+- Strona główna z sekcjami:
+    - **Baner/slider**
+    - **Szybki dostęp do usług** (kafelki)
+    - **Aktualności** z paginacją
+- Nawigacja z dropdownem (Usługi, Aktualności, O nas, Kontakt)
+- Stopka z danymi kontaktowymi, menu oraz linkami
+
+## 📁 Struktura projektu
+
+```
+/src
+├── Assets/              # Zdjęcia i obrazy
+├── Components/          # Komponenty wspólne (Tile, SingleNews, Slider, AboutUs)
+├── Styles/              # Pliki CSS
+├── Categories.jsx       # Sekcja kafelków z usługami
+├── Header.jsx           # Pasek nawigacyjny
+├── Footer.jsx           # Stopka
+├── Banner.jsx           # Baner + komponent AboutUs
+├── News.jsx             # Sekcja aktualności z paginacją
+```
+
+## 🚀 Uruchomienie lokalne
+
+```bash
+npm install
+npm run dev
+```
+
+Aplikacja uruchomi się na `http://localhost:5173` (lub innym porcie podanym przez Vite).
+
+## 📌 Uwagi
+
+- Wszystkie dane są statyczne i służą jako demo.
+
+## 📸 Podgląd aplikacji
+
+Dodam potem...
