@@ -10,7 +10,7 @@
                                      alt="zdjecie lekarza"/>
                             </div>
                             <div className="col-sm-8">
-                                <h4>Kim jesteśmy?</h4>
+                                <h4 className="text-secondary">Kim jesteśmy?</h4>
                                 <p>Świadczymy szeroką gamę usług medycznych z zakresu Podstawowej Opieki
                                     Zdrowotnej.
                                     Ambulatoryjnej Opieki Specjalistycznej, Stomatologii, Diagnostyki

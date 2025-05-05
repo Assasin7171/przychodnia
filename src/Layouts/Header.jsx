@@ -17,26 +17,22 @@ const Header = () => {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav mx-auto mb-2 mb-lg-0 gap-4">
                                 <li className="nav-item dropdown">
-                                    <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    <a className="nav-link dropdown-toggle" href="#" role="button"
+                                       data-bs-toggle="dropdown"
                                        aria-expanded="false">
                                         Usługi
                                     </a>
 
-                                    <div className="dropdown-menu">
-                                        <div className="container-fluid">
-                                            <div className="row">
-                                                <a className="dropdown-item" href="#">E-Rejestracja</a>
-                                                <a className="dropdown-item" href="#">Poradnie specjalistyczne</a>
-                                                <a className="dropdown-item" href="#">Nasze oddziały</a>
-                                                <a className="dropdown-item" href="#">Stomatologia</a>
-                                            </div>
-                                        </div>
-
+                                    <ul className="dropdown-menu">
+                                        <li><a className="dropdown-item" href="#">E-Rejestracja</a></li>
+                                        <li><a className="dropdown-item" href="#">Poradnie specjalistyczne</a></li>
+                                        <li><a className="dropdown-item" href="#">Nasze oddziały</a></li>
+                                        <li><a className="dropdown-item" href="#">Stomatologia</a></li>
                                         <li><a className="dropdown-item" href="#">Rehabilitacja</a></li>
                                         <li><a className="dropdown-item" href="#">Badania diagnostyczne</a></li>
                                         <li><a className="dropdown-item" href="#">Badania kliniczne</a></li>
                                         <li><a className="dropdown-item" href="#">E-Wyniki</a></li>
-                                    </div>
+                                    </ul>
 
                                 </li>
                                 <li className="nav-item">

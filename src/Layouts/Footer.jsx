@@ -84,7 +84,6 @@ const Footer = () => {
                         <Link className="link-info text-white" to="/facebook"><i className="bi bi-facebook"></i></Link>
                         <Link className="link-info text-white" to="/google"><i className="bi bi-google"></i></Link>
                         <Link className="link-info text-white" to="/google"><i className="bi bi-youtube"></i></Link>
-
                     </div>
                 </div>
             </div>

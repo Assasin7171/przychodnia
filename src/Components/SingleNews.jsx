@@ -15,7 +15,7 @@ const SingleNews = (props) => {
                 <ul className="list-group list-group-flush">
                     <li className="list-group-item">{props.item.dateOfCreate}</li>
                 </ul>
-                <div className="card-body">
+                <div style={{height: '8rem'}} className="card-body overflow-hidden">
                     <h5 className="card-title lead">{props.item.title}</h5>
                 </div>
                 <ul className="list-group list-group-flush">
