@@ -3,12 +3,6 @@ import "./Styles/SingleNews.css";
 
 const SingleNews = (props) => {
     return (
-        // <div className="news">
-        //     <img src={props.item.image} alt=""/>
-        //     <span className="dateOfCreate">{props.item.dateOfCreate}</span>
-        //     <span className="title-news font-heavy">{props.item.title}</span>
-        //     <Link className="secondary-color" to={props.item.link}>Czytaj więcej</Link>
-        // </div>
         <div className="col-md-3 p-0" style={{width: '18rem'} }>
             <div className="card h-100 p-2">
                 <img src={props.item.image} className="card-img-top news-img" alt="..."/>
@@ -23,8 +17,6 @@ const SingleNews = (props) => {
                 </ul>
             </div>
         </div>
-
-
     )
 }
 

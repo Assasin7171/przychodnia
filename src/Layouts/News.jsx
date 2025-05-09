@@ -1,8 +1,7 @@
 ﻿import SingleNews from "../Components/SingleNews.jsx";
 import {Link} from "react-router-dom";
 import '../Styles/News.css';
-import {useState} from "react";
-
+import {useEffect, useState} from "react";
 
 const data = [
     {
@@ -77,26 +76,29 @@ const data = [
     }
 ];
 
-
 const News = () => {
     const itemsPerPage = 4
-    const [startIndex, setStartIndex] = useState(0)
+    const [newsToDisplay, setNewsToDisplay] = useState([])
+
+    useEffect(() => {
+        changeNews("next");
+    }, []);
 
     const changeNews = (direction) => {
-        if(direction === "next") {
-            setStartIndex(prevState => {
-                let newIndex = prevState + itemsPerPage;
-                if(newIndex >= data.length) {
-                    return prevState + itemsPerPage;
-                }
-            })
+        const dataLenght = data.length;
+        let tempData = [];
+
+        if (direction === "next") {
+            for (let i = 0; i < 4; i++) {
+                tempData.push(data[i])
+            }
+
+            setNewsToDisplay(tempData);
         }
     }
 
     // wyświetlamy aktualne 4 elementy
-    const newsList = data
-        .slice(startIndex, startIndex + itemsPerPage)
-        .map(item => <SingleNews key={item.id} item={item}/>)
+    const newsList = newsToDisplay.map(item => <SingleNews key={item.id} item={item}/>)
 
     return (
         <section className="container-md position-relative">
