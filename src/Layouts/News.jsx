@@ -1,6 +1,7 @@
 ﻿import SingleNews from "../Components/SingleNews.jsx";
 import {Link} from "react-router-dom";
 import '../Styles/News.css';
+import {useState} from "react";
 
 const data = [
     {
