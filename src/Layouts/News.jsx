@@ -1,7 +1,6 @@
 ﻿import SingleNews from "../Components/SingleNews.jsx";
 import {Link} from "react-router-dom";
 import '../Styles/News.css';
-import {useEffect, useState} from "react";
 
 const data = [
     {
@@ -77,28 +76,24 @@ const data = [
 ];
 
 const News = () => {
-    const itemsPerPage = 4
-    const [newsToDisplay, setNewsToDisplay] = useState([])
-
-    useEffect(() => {
-        changeNews("next");
-    }, []);
+    const [currentIndex, setCurrentIndex] = useState(0);
 
     const changeNews = (direction) => {
-        const dataLenght = data.length;
-        let tempData = [];
-
         if (direction === "next") {
-            for (let i = 0; i < 4; i++) {
-                tempData.push(data[i])
-            }
-
-            setNewsToDisplay(tempData);
+            setCurrentIndex((prev) => (prev + 1) % data.length);
+        } else if (direction === "prev") {
+            setCurrentIndex((prev) => (prev - 1 + data.length) % data.length);
         }
-    }
+    };
+
 
     // wyświetlamy aktualne 4 elementy
-    const newsList = newsToDisplay.map(item => <SingleNews key={item.id} item={item}/>)
+    const newsToDisplay = [];
+
+    for (let i = 0; i < 4; i++) {
+        const index = (currentIndex + i) % data.length;
+        newsToDisplay.push(data[index]);
+    }
 
     return (
         <section className="container-md position-relative">
@@ -108,7 +103,7 @@ const News = () => {
 
             <div className="row">
                 <div className="col gap-2 d-flex justify-content-center overflow-hidden">
-                    {newsList}
+                    {newsToDisplay.map(item => <SingleNews key={item.id} item={item}/>)}
                 </div>
             </div>
 
