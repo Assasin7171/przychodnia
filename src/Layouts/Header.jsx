@@ -5,10 +5,12 @@ import 'bootstrap/js/src/collapse.js';
 const Header = () => {
     return (
         <div className="container-fluid bg-white sticky-top shadow-sm">
-            <div className="container-md px-0 ">
+            <div className="container-md px-0">
                 <nav className="navbar navbar-expand-lg bg-white  lead text-uppercase">
                     <div className="container-fluid">
-                        <img src="https://placehold.co/80x80" className="img-fluid" alt="logo"/>
+                        <Link to="/przychodnia">
+                            <img src="https://placehold.co/80x80" className="img-fluid" alt="logo"/>
+                        </Link>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">
@@ -39,10 +41,10 @@ const Header = () => {
                                     <Link className="nav-link" aria-current="page" to="/aktualnosci">Aktualności</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" aria-current="page" to="/o_nas">O nas</Link>
+                                    <Link className="nav-link" aria-current="page" to="/przychodnia/o-nas">O nas</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" aria-current="page" to="/kontakt">Kontakt</Link>
+                                    <Link className="nav-link" aria-current="page" to="/przychodnia/kontakt">Kontakt</Link>
                                 </li>
                             </ul>
                             <form className="d-flex" role="search">

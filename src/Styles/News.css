@@ -9,3 +9,7 @@
 .news-img{
     transition: transform .3s ease-in-out;
 }
+
+#news-slider{
+    transition: 1s ease;
+}

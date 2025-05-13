@@ -39,41 +39,41 @@ const data = [
         link: "/",
         image: "https://picsum.photos/150/150"
     },
-    {
-        id: 5,
-        dateOfCreate: "2024-03-25",
-        title: "Nowy oddział kardiologii otwarty",
-        link: "/",
-        image: "https://picsum.photos/150/150"
-    },
-    {
-        id: 6,
-        dateOfCreate: "2024-03-30",
-        title: "Zapraszamy na dni otwarte szpitala",
-        link: "/",
-        image: "https://picsum.photos/150/150"
-    },
-    {
-        id: 7,
-        dateOfCreate: "2024-04-01",
-        title: "Szczepienia przeciwko grypie - terminy",
-        link: "/",
-        image: "https://picsum.photos/150/150"
-    },
-    {
-        id: 8,
-        dateOfCreate: "2024-04-05",
-        title: "Nowoczesne metody leczenia w naszej placówce",
-        link: "/",
-        image: "https://picsum.photos/150/150"
-    },
-    {
-        id: 9,
-        dateOfCreate: "2024-04-10",
-        title: "Bezpłatne konsultacje dietetyczne",
-        link: "/",
-        image: "https://picsum.photos/150/150"
-    }
+    // {
+    //     id: 5,
+    //     dateOfCreate: "2024-03-25",
+    //     title: "Nowy oddział kardiologii otwarty",
+    //     link: "/",
+    //     image: "https://picsum.photos/150/150"
+    // },
+    // {
+    //     id: 6,
+    //     dateOfCreate: "2024-03-30",
+    //     title: "Zapraszamy na dni otwarte szpitala",
+    //     link: "/",
+    //     image: "https://picsum.photos/150/150"
+    // },
+    // {
+    //     id: 7,
+    //     dateOfCreate: "2024-04-01",
+    //     title: "Szczepienia przeciwko grypie - terminy",
+    //     link: "/",
+    //     image: "https://picsum.photos/150/150"
+    // },
+    // {
+    //     id: 8,
+    //     dateOfCreate: "2024-04-05",
+    //     title: "Nowoczesne metody leczenia w naszej placówce",
+    //     link: "/",
+    //     image: "https://picsum.photos/150/150"
+    // },
+    // {
+    //     id: 9,
+    //     dateOfCreate: "2024-04-10",
+    //     title: "Bezpłatne konsultacje dietetyczne",
+    //     link: "/",
+    //     image: "https://picsum.photos/150/150"
+    // }
 ];
 
 const News = () => {
@@ -91,6 +91,7 @@ const News = () => {
     // wyświetlamy aktualne 4 elementy
     const newsToDisplay = [];
 
+    //tworze 4 newsy, więc pętla do 3
     for (let i = 0; i < 4; i++) {
         const index = (currentIndex + i) % data.length;
         newsToDisplay.push(data[index]);
@@ -102,7 +103,8 @@ const News = () => {
                 <h2 className="text-center text-secondary rounded-2 bg-white shadow-sm my-5 slider-container p-3">Aktualności</h2>
             </div>
 
-            <div className="row">
+            <div className="row"
+                 id="news-slider">
                 <div className="col gap-2 d-flex justify-content-center overflow-hidden">
                     {newsToDisplay.map(item => <SingleNews key={item.id} item={item}/>)}
                 </div>
