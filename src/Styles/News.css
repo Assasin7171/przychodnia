@@ -2,14 +2,26 @@
     transform: translateY(-600%);
 }
 
-.news-img:hover{
-    transform: scale(1.02);
-    transition: transform .3s ease-in-out;
-}
-.news-img{
-    transition: transform .3s ease-in-out;
+#single-news{
+    animation-duration: 2s;
+    animation-name: newsAnimation;
 }
 
-#news-slider{
-    transition: 1s ease;
+#single-news img{
+    min-height: 170px;
+    min-width: 130px;
+}
+
+#single-news:hover{
+
+}
+
+@keyframes newsAnimation {
+    0%{
+        opacity: 0;
+        transition: ease 1s;
+    }
+    100%{
+        opacity: 1;
+    }
 }

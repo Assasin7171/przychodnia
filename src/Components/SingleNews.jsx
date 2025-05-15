@@ -3,7 +3,7 @@ import "./Styles/SingleNews.css";
 
 const SingleNews = (props) => {
     return (
-        <div className="col-md-3 p-0" style={{width: '18rem'} }>
+        <div className="col-md-3 p-0" id="single-news">
             <div className="card h-100 p-2">
                 <img src={props.item.image} className="card-img-top news-img" alt="..."/>
                 <ul className="list-group list-group-flush">
@@ -17,6 +17,7 @@ const SingleNews = (props) => {
                 </ul>
             </div>
         </div>
+
     )
 }
 
