@@ -57,7 +57,7 @@ const ErrorPage = () => {
                 <p className="lead">
                     Pracuje nad tą sekcją. Wróć do nas wkrótce! 🛠️
                 </p>
-                <Link to="/" className="btn-custom">
+                <Link to="/przychodnia" className="btn-custom">
                     Wróć na stronę główną
                 </Link>
             </div>
