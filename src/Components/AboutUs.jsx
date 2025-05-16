@@ -23,7 +23,7 @@
                         </div>
                     </section>
                 </div>
-                <div className="col-md-6 p-0 m-0 bg-body-tertiary">
+                <div className="col-md-6 p-0 m-0 bg-white">
                     <div className="row mx-3">
                         <section id="dane-kontaktowe" className="py-4 py-sm-5 px-3 ms-3 gap-1">
 

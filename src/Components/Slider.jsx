@@ -1,34 +1,30 @@
 ﻿import "bootstrap/js/src/carousel.js";
+import {Swiper, SwiperSlide} from "swiper/react";
+import {Navigation, Pagination} from "swiper/modules";
 
 const Slider = ({bgImages}) => {
+    const slides = bgImages.map((image) => (
+        <SwiperSlide key={image} className="c-item">
+            <img src={image.toString()} className="c-img img-fluid" alt="zdjęcie"/>
+        </SwiperSlide>
+    ))
     return (
-        <div className="container-fluid p-0 m-0">
-            <div id="carouselExample" className="carousel slide">
-                <div className="carousel-inner">
-                    <div className="carousel-item c-item active">
-                        <img src={bgImages[0]} className="d-block c-img w-100" alt="..."/>
-                    </div>
-                    <div className="carousel-item c-item">
-                        <img src={bgImages[1]} className="d-block c-img w-100" alt="..."/>
-                    </div>
-                    <div className="carousel-item c-item">
-                        <img src={bgImages[2]} className="d-block c-img w-100" alt="..."/>
-                    </div>
-                    <div className="carousel-item c-item">
-                        <img src={bgImages[3]} className="d-block c-img w-100" alt="..."/>
-                    </div>
-                </div>
-                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                        data-bs-slide="prev">
-                    <span className="carousel-control-prev-icon rounded-circle" aria-hidden="true"></span>
-                    <span className="visually-hidden">Previous</span>
-                </button>
-                <button className="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                        data-bs-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Next</span>
-                </button>
-            </div>
+        <div className="container-fluid mt-2">
+            <Swiper spaceBetween={30}
+                    autoplay={true}
+                    grabCursor={true}
+                    loop={true}
+                    watchSlidesProgress={true}
+                    breakpoints={{
+                        320: { slidesPerView: 1 },
+                        768: { slidesPerView: 2 },
+                        1024: { slidesPerView: 2 },
+                    }}
+                    navigation={true}
+                    modules={[Pagination, Navigation]}
+                    className="mySwiper">
+                {slides}
+            </Swiper>
         </div>
 
     )
