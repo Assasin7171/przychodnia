@@ -1,38 +1,13 @@
-/*.app {*/
-/*    margin: 0 auto;*/
-/*}*/
+.bg-gradient {
+    background: linear-gradient(135deg, #0d6efd, #6610f2);
+}
 
-/*.primary-color {*/
-/*    color: #2F3C7E;*/
-/*}*/
+.btn-outline-light:hover {
+    background-color: #fff;
+    color: #0d6efd;
+    transition: all 0.3s ease;
+}
 
-/*.secondary-color {*/
-/*    color: #2D9CDB;*/
-/*}*/
-
-/*.font-light {*/
-/*    font-weight: 300;*/
-/*}*/
-
-/*.font-heavy {*/
-/*    font-weight: 500;*/
-/*}*/
-
-/*.small-text {*/
-/*    font-size: 14px;*/
-/*}*/
-
-/*.upperCaseText {*/
-/*    text-transform: uppercase;*/
-/*}*/
-
-/*a {*/
-/*    text-decoration: none;*/
-/*}*/
-
-/*a:hover {*/
-/*    cursor: pointer;*/
-/*}*/
 
 .text-res {
     font-size: 0.9rem;
