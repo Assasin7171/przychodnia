@@ -1,24 +1,24 @@
-﻿import {Link} from "react-router-dom";
-import "./Styles/SingleNews.css";
+﻿import { Link } from "react-router-dom";
+import './Styles/SingleNews.css';
 
-const SingleNews = (props) => {
+const SingleNews = ({ item }) => {
     return (
-        <div className="col-md-3 p-0" id="single-news">
-            <div className="card h-100 p-2">
-                <img src={props.item.image} className="card-img-top news-img" alt="..."/>
-                <ul className="list-group list-group-flush">
-                    <li className="list-group-item">{props.item.dateOfCreate}</li>
-                </ul>
-                <div style={{height: '8rem'}} className="card-body overflow-hidden">
-                    <h5 className="card-title lead">{props.item.title}</h5>
+        <div className="news-card">
+            <div className="news-card-inner">
+                <img src={item.image} className="news-image" alt="Zdjęcie" />
+
+                <div className="news-date">{item.dateOfCreate}</div>
+
+                <div className="news-body">
+                    <h5 className="news-title">{item.title}</h5>
                 </div>
-                <ul className="list-group list-group-flush">
-                    <Link to={props.item.link} className="btn btn-link">Czytaj więcej</Link>
-                </ul>
+
+                <div className="news-footer">
+                    <Link to={item.link} className="news-link">Czytaj więcej</Link>
+                </div>
             </div>
         </div>
-
-    )
-}
+    );
+};
 
 export default SingleNews;

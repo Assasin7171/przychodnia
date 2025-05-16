@@ -1,14 +1,15 @@
 import {StrictMode} from 'react'
 import {createRoot} from 'react-dom/client'
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {register} from "swiper/element";
 
 // Import Bootstrap styles
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.min.css'
 
 import './Styles/index.css'
-import App from './Layouts/App.jsx'
 
+import App from './Layouts/App.jsx'
 import ErrorPage from "./Pages/ErrorPage.jsx";
 import ContactPage from "./Pages/ContactPage.jsx";
 import AboutUsPage from "./Pages/AboutUsPage.jsx";
@@ -24,4 +25,7 @@ createRoot(document.getElementById('root')).render(
             </Routes>
         </BrowserRouter>
     </StrictMode>,
-)
+);
+
+//swiper
+register();
