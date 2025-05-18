@@ -40,13 +40,6 @@ const Categories = () => {
                 </div>
             </div>
         </section>
-
-
-        // <nav className="link-categories">
-        //     {tiles.map((tile) => (<Tile key={tile.id} header={tile.header} body={tile.body}/>))}
-        // </nav>
-
-
     )
 }
 
