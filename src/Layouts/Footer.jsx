@@ -4,8 +4,8 @@ const Footer = () => {
     return (
         <>
             <div className="container-md mt-5">
-                <footer className="row border-top pt-4 ">
-                    <div className="col-md-3 custom-border p-3 border-top-0 border-2">
+                <footer className="row border-top pt-4 justify-content-center">
+                    <div className="col-md-3 custom-border flex-grow-1 p-3 border-top-0 border-2">
                         <p className="h5 text-uppercase mb-4">Jak nas znaleźć?</p>
                         <div className="tresc">
                             <p>Przychodnia Rawka</p>
@@ -37,20 +37,7 @@ const Footer = () => {
                         </div>
 
                     </div>
-                    <div className="col-md-3 custom-border p-3 border-2">
-                        <span className="h5 text-uppercase">Nasze placówki</span>
-                        <div className="d-flex flex-column mt-4 gap-1">
-                            <Link className="link-info nav-link text-primary" to="">Lorem ipsum</Link>
-                            <Link className="link-info nav-link text-primary" to="">Lorem ipsum</Link>
-                            <Link className="link-info nav-link text-primary" to="">Lorem ipsum</Link>
-                            <Link className="link-info nav-link text-primary" to="">Lorem ipsum</Link>
-                            <Link className="link-info nav-link text-primary" to="">Lorem ipsum</Link>
-                            <Link className="link-info nav-link text-primary" to="">Lorem ipsum</Link>
-                            <Link className="link-info nav-link text-primary" to="">Lorem ipsum</Link>
-                            <Link className="link-info nav-link text-primary" to="">Lorem ipsum</Link>
-                        </div>
-                    </div>
-                    <div className="col-md-3 custom-border p-3 border-2">
+                    <div className="col-md-3 custom-border flex-grow-1 p-3 border-2">
                         <span className="h5 text-uppercase">Menu</span>
                         <div className="footer-menu mt-4 gap-1 d-flex flex-column">
                             <Link className="link-info nav-link text-primary text-uppercase" to="">umów wizyte</Link>
@@ -61,7 +48,7 @@ const Footer = () => {
                             <Link className="link-info nav-link text-primary text-uppercase" to="">umów wizyte</Link>
                         </div>
                     </div>
-                    <div className="col-md-3 custom-border p-3 border-end-0 border-2">
+                    <div className="col-md-3 custom-border flex-grow-1 p-3 border-end-0 border-2">
                         <span className="h5 text-uppercase">Menu</span>
                         <div className="footer-menu mt-4 gap-1 d-flex flex-column">
                             <Link className="link-info nav-link text-primary text-uppercase" to="">umów wizyte</Link>
@@ -80,7 +67,7 @@ const Footer = () => {
                         <span className="text-white">Copyright © 2025</span>
                     </div>
 
-                    <div className="media  d-flex gap-2 align-items-center">
+                    <div className="media d-flex gap-2 align-items-center">
                         <Link className="link-info text-white" to="/facebook"><i className="bi bi-facebook"></i></Link>
                         <Link className="link-info text-white" to="/google"><i className="bi bi-google"></i></Link>
                         <Link className="link-info text-white" to="/google"><i className="bi bi-youtube"></i></Link>

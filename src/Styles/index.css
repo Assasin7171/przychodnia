@@ -14,3 +14,7 @@
         border-inline-end: 2px solid #dee2e6 !important;
     }
 }
+
+.row .custom-border:last-child {
+    border-right: none !important;
+}
